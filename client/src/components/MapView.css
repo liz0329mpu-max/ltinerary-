@@ -1,0 +1,91 @@
+.map-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-placeholder {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  color: #999;
+  font-size: 16px;
+}
+
+.marker-popup {
+  min-width: 200px;
+}
+
+.popup-image {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.marker-popup h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.marker-popup p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.marker-popup .address,
+.marker-popup .visit-time {
+  color: #999;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .map-placeholder {
+    height: 300px;
+    font-size: 14px;
+  }
+
+  .marker-popup {
+    min-width: 150px;
+    max-width: 200px;
+  }
+
+  .popup-image {
+    max-width: 100%;
+    height: 120px;
+  }
+
+  .marker-popup h4 {
+    font-size: 14px;
+  }
+
+  .marker-popup p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-placeholder {
+    height: 250px;
+    font-size: 12px;
+  }
+
+  .marker-popup {
+    min-width: 120px;
+    max-width: 150px;
+  }
+
+  .popup-image {
+    height: 100px;
+  }
+}
+
+

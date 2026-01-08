@@ -1,0 +1,572 @@
+.itinerary-detail {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.detail-loading,
+.detail-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+.detail-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.detail-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.detail-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.detail-cover-wrapper {
+  margin-bottom: 30px;
+}
+
+.detail-cover {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.detail-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edit-cover-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.edit-cover-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.detail-cover-placeholder {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-cover-placeholder p {
+  color: #999;
+  font-size: 16px;
+  margin: 0;
+}
+
+.add-cover-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.add-cover-btn:hover {
+  opacity: 0.9;
+}
+
+.edit-cover-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cover-image-input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  width: 100%;
+}
+
+.cover-image-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.cover-form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-cover-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+  flex: 1;
+}
+
+.save-cover-btn:hover {
+  opacity: 0.9;
+}
+
+.cancel-cover-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+  flex: 1;
+}
+
+.cancel-cover-btn:hover {
+  background: #5a6268;
+}
+
+.detail-description {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-description p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.detail-actions {
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
+
+.add-attraction-form {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-with-suggestion {
+  width: 100%;
+}
+
+.add-attraction-form input,
+.add-attraction-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-attraction-form input:focus,
+.add-attraction-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.attractions-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attractions-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.empty-attractions {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+.attractions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.attraction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  gap: 20px;
+}
+
+.attraction-image {
+  width: 200px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.attraction-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attraction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.attraction-info h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.attraction-info p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.attraction-info .address,
+.attraction-info .coordinates,
+.attraction-info .visit-time {
+  color: #999;
+  font-size: 12px;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+.map-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .detail-header {
+    padding: 15px 20px;
+  }
+
+  .detail-header h1 {
+    font-size: 24px;
+  }
+
+  .detail-content {
+    padding: 20px 15px;
+  }
+
+  .detail-cover {
+    height: 250px;
+  }
+
+  .detail-cover-placeholder {
+    height: 250px;
+  }
+
+  .edit-cover-btn {
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .detail-description {
+    padding: 15px;
+  }
+
+  .detail-description p {
+    font-size: 14px;
+  }
+
+  .add-attraction-form {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .attractions-section {
+    padding: 20px;
+  }
+
+  .attractions-section h2 {
+    font-size: 20px;
+  }
+
+  .attraction-item {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .attraction-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .attraction-info h3 {
+    font-size: 16px;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+
+  .cover-form-actions {
+    flex-direction: column;
+  }
+
+  .map-section {
+    padding: 20px;
+  }
+
+  .map-section h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-header {
+    padding: 12px 15px;
+  }
+
+  .detail-header h1 {
+    font-size: 20px;
+  }
+
+  .back-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .detail-content {
+    padding: 15px 10px;
+  }
+
+  .detail-cover {
+    height: 200px;
+  }
+
+  .detail-cover-placeholder {
+    height: 200px;
+  }
+
+  .detail-cover-placeholder p {
+    font-size: 14px;
+  }
+
+  .add-cover-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .edit-cover-btn {
+    top: 8px;
+    right: 8px;
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .edit-cover-form {
+    padding: 15px;
+  }
+
+  .detail-description {
+    padding: 12px;
+  }
+
+  .detail-description p {
+    font-size: 13px;
+  }
+
+  .add-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .add-attraction-form {
+    padding: 15px;
+  }
+
+  .add-attraction-form input,
+  .add-attraction-form textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .attractions-section {
+    padding: 15px;
+  }
+
+  .attractions-section h2 {
+    font-size: 18px;
+  }
+
+  .attraction-item {
+    padding: 12px;
+  }
+
+  .attraction-image {
+    height: 150px;
+  }
+
+  .attraction-info h3 {
+    font-size: 15px;
+  }
+
+  .attraction-info p {
+    font-size: 13px;
+  }
+
+  .map-section {
+    padding: 15px;
+  }
+
+  .map-section h2 {
+    font-size: 18px;
+  }
+}
+
+

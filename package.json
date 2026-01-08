@@ -1,0 +1,41 @@
+{
+  "name": "travel-itinerary-planner",
+  "version": "1.0.0",
+  "description": "A comprehensive travel itinerary planning website with map integration, currency converter, and AI assistant",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm run dev",
+    "install-all": "npm install && cd client && npm install",
+    "build": "cd client && npm run build",
+    "build:client": "cd client && npm run build",
+    "start:prod": "node server/index.js",
+    "start": "node server/index.js"
+  },
+  "keywords": [
+    "travel",
+    "itinerary",
+    "planner",
+    "map",
+    "currency",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "lowdb": "^7.0.1",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  }
+}
+
+
